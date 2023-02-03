@@ -21,7 +21,7 @@ $teclado = ['', 'C', '()', '%', '/', '7', '8', '9', 'X', '4', '5', '6', '-', '1'
             <div class="row">
                 <?php
                     for ($i = 1 ; $i <= 20; $i++) {
-                        echo "<input type='button' id='teclas' value='$teclado[$i]' name='teclado[$i]' onclick='value(6)'> </>";
+                        echo "<button type='button' id='teclas' value='' name='teclado[$i]' class='botao bnt click' onclick='inserir(4)'>$teclado[$i]</button>";
                         if ($i % 4 == 0) {
                             echo "<br>";
                         }
@@ -29,7 +29,7 @@ $teclado = ['', 'C', '()', '%', '/', '7', '8', '9', 'X', '4', '5', '6', '-', '1'
                 ?>
                 <script>
                     function adicionarValor(valor) {
-                        document.querySelector("#tela input").value += valor;
+                        document.querySelector("#tela button").value += valor;
                     } 
                 </script>
             </div>
